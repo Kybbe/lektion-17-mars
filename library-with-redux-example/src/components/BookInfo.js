@@ -1,53 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import books from '../assets/childrensbooks.json';
 import { useHistory } from 'react-router-dom';
-
-/**
- * 1. Hämta id från url:en exempelvis localhost:3000/info/1 
- * 2. Läs in childrensbooks.json
- * 3. Filtera ut den bok som motsvarar det ID som finns i url:en
- * 4. Visa detaljerad info om bok
- */
+import { useSelector } from 'react-redux';
 
 
 function BookInfo() {
-    //Hämtar ut vad som finns i url:en efter /info det som i App.js är :id
-    const { id } = useParams();
     const history = useHistory();
-    const [book , setBook] = useState({});
-    console.log('useParams: ', id);
-
-    useEffect(() => {
-        console.log('Books ', books);
-        //Filtera ut den bok som motsvarar det ID som finns i url:en
-        const foundBook = books.filter((bookObj) => {
-            return bookObj.id === parseInt(id);
-        });
-
-        console.log(foundBook);
-        setBook(foundBook[0]);
-    }, [])
+    const book = useSelector((state) => { return state.selectedBook });
 
     return (
-        <main class="background-dark">
-            <div class="book-info">
+        <main className="background-dark">
+            <div className="book-info">
                 <header>
-                    <a href="#" class="back" onClick={ () => history.push('/') }>&#8592;</a>
+                    <a href="#" className="back" onClick={ () => history.push('/') }>&#8592;</a>
                 </header>
-                <section class="display">
-                    <article class="book" style={{ backgroundColor: book.color }}>
-                        <section class="bg"></section>
-                        <section class="content">
+                <section className="display">
+                    <article className="book" style={{ backgroundColor: book.color }}>
+                        <section className="bg"></section>
+                        <section className="content">
                             <aside></aside>
-                            <section class="about">
+                            <section className="about">
                                 <h2>{ book.title }</h2>
                                 <h3>{ book.author }</h3>
                             </section>
                         </section>
                     </article>
                 </section>
-                <section class="info">
+                <section className="info">
                     <h1>{ book.title }</h1>
                     <h3>{ book.author }</h3>
                     <p>{ book.plot }</p>

@@ -6,6 +6,8 @@ Skapa ett nytt projekt med `npx create-react-app mappnamn`. Efter skriv cd map
 
 Lägg till så att man kan skriva in sitt namn i ett inputfält, detta ska sedan sparas i din redux store. En annan komponent ska sedan läsa från din store och skriva ut ditt namn med en hälsning.
 
+[Where it’s @ - React edition!](https://gist.github.com/zocom-christoffer-wallenberg/0fbba5ddbbcefda43b2d77a596163575)
+
 ## Artiklar
 
 [https://redux.js.org/](https://redux.js.org/)
