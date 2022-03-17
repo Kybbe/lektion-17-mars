@@ -9,8 +9,11 @@ Lägg till så att man kan skriva in sitt namn i ett inputfält, detta ska sedan
 ## Artiklar
 
 [https://redux.js.org/](https://redux.js.org/)
+
 [https://redux.js.org/tutorials/essentials/part-2-app-structure#component-state-and-forms](https://redux.js.org/tutorials/essentials/part-2-app-structure#component-state-and-forms)
+
 [https://daveceddia.com/redux-tutorial/](https://daveceddia.com/redux-tutorial/)
+
 [https://github.com/reduxjs/redux-devtools](https://github.com/reduxjs/redux-devtools)
 
 ## Videor
